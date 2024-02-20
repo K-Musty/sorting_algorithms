@@ -1,5 +1,7 @@
 #include "sort.h"
 
+void swap(int *arr, size_t i, size_t j);
+
 /**
  * selection_sort - Sorts an integer array using the Selection sort algorithm
  * @array: array
@@ -20,3 +22,19 @@ void selection_sort(int *array, size_t size)
 				}
 }
 
+
+/**
+ * swap - swaps between elements
+ * @arr: array
+ * @i: element a
+ * @j: element b
+ */
+void swap(int *arr, size_t i, size_t j)
+{
+	int tmp;
+
+	tmp = arr[i];
+	arr[i] = arr[j];
+	arr[j] = tmp;
+
+}
